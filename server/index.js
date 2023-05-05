@@ -9,6 +9,12 @@ const mongoose = require('mongoose')
 
 
 
+app.use(express.json())
+app.use(cookieParser())
+app.use(cors)
+
+
+
 const start = async ()=>{
     try{
         await mongoose.connect(process.env.DB_URL,{
